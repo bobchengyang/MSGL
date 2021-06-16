@@ -16,9 +16,13 @@ end
 
 W=reshape(W, [N N]);
 W(1:N+1:end) = 0;
+% W=fully_connected_to_knn(W,k);
+% W_n0=W~=0;
+% imagesc(W);
 D=diag(sum(W));
 L=D-W;
-L=D^(-0.5)*L*D^(-0.5);
+% L=D^(-0.5)*L*D^(-0.5);
 L=(L+L')/2;
+% L=L/max(eig(L));
 end
 
