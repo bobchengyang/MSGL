@@ -25,7 +25,7 @@ disp('17. Colon-cancer; 2000 features.');
 
 mean_std=zeros(15,2,1);
 for n_beta=3:3
-    for dataset_i=1:15
+    for dataset_i=20:20
         if dataset_i==1
             read_data = importdata('australian.csv');
         elseif dataset_i==2
@@ -141,5 +141,5 @@ for n_beta=3:3
 end
 
 clearvars -except mean_std
-save apsipa_acc_time_normalized_cL3.mat
+% save apsipa_acc_time_normalized_cL3.mat
 % save icassp2021_experiments_XJ_1st_NR_2nd_GD.mat
